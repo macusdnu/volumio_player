@@ -1,0 +1,51 @@
+[
+    {
+        "service": "webradio",
+        "uri": "http://opml.radiotime.com/Tune.ashx?id=s139915",
+        "title": "1.FM Amsterdam Trance",
+        "icon": "fa fa-microphone",
+        "albumart": "http://cdn-radiotime-logos.tunein.com/s139915q.png"
+    },
+    {
+        "service": "webradio",
+        "uri": "http://opml.radiotime.com/Tune.ashx?id=s74986",
+        "title": "1.FM Adore Jazz",
+        "icon": "fa fa-microphone",
+        "albumart": "http://cdn-radiotime-logos.tunein.com/s74986q.png"
+    },
+    {
+        "service": "webradio",
+        "uri": "http://opml.radiotime.com/Tune.ashx?id=s47718",
+        "title": "1.FM Chillout Lounge",
+        "icon": "fa fa-microphone",
+        "albumart": "http://cdn-radiotime-logos.tunein.com/s47718q.png"
+    },
+    {
+        "service": "webradio",
+        "uri": "http://opml.radiotime.com/Tune.ashx?id=s233143",
+        "title": "1.FM - Deep House Radio",
+        "icon": "fa fa-microphone",
+        "albumart": "http://cdn-radiotime-logos.tunein.com/s233143q.png"
+    },
+    {
+        "service": "webradio",
+        "uri": "http://opml.radiotime.com/Tune.ashx?id=s47723",
+        "title": "1.FM Bay Smooth Jazz",
+        "icon": "fa fa-microphone",
+        "albumart": "http://cdn-radiotime-logos.tunein.com/s47723q.png"
+    },
+    {
+        "service": "webradio",
+        "uri": "http://opml.radiotime.com/Tune.ashx?id=s197120",
+        "title": "1.FM - BOM Psytrance Radio",
+        "icon": "fa fa-microphone",
+        "albumart": "http://cdn-radiotime-logos.tunein.com/s197120q.png"
+    },
+    {
+        "service": "webradio",
+        "uri": "http://opml.radiotime.com/Tune.ashx?id=s197120",
+        "title": "1.FM - BOM Psytrance Radio",
+        "icon": "fa fa-microphone",
+        "albumart": "http://cdn-radiotime-logos.tunein.com/s197120q.png"
+    }
+]

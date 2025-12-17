@@ -1,0 +1,36 @@
+{
+	"name": "i2c-radio-buttons",
+	"version": "1.0.0",
+	"description": "pcf8575 i2c controller for radio buttons",
+	"main": "index.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"author": "macusdnu",
+	"license": "ISC",
+	"repository": "https://github.com/macusdnu/i2c-radio-buttons",
+	"volumio_info": {
+		"prettyName": "Radio Button Controller",
+		"icon": "fa-sliders",
+		"plugin_type": "system_hardware",
+		"architectures": [
+			"amd64",
+			"armhf",
+			"i386"
+		],
+		"os": [
+			"buster"
+		],
+		"details": "Radio Button Controller",
+		"changelog": "Alpha release"
+	},
+	"engines": {
+		"node": ">=20",
+		"volumio": ">=3"
+	},
+	"dependencies": {
+		"kew": "^0.7.0",
+		"v-conf": "^1.4.0",
+		"i2c-bus": "^5.2.3"
+	}
+}

@@ -1,0 +1,13 @@
+{
+  "pcf8575_enabled": "false",
+  "pcf8575_addr": "0x20",
+  "button1_station": "",
+  "button2_station": "",
+  "button3_station": "",
+  "button4_station": "",
+  "button5_station": "",
+  "button6_station": "",
+  "button7_station": "",
+  "button8_station": "",
+  "button9_station": ""
+}

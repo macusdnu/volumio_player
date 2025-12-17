@@ -1,0 +1,138 @@
+{
+  "page": {
+    "label": "Radio Button Controller",
+    "icon": "fa-sliders"
+  },
+  "sections": [
+    {
+      "id": "pcf_section",
+      "element": "section",
+      "label": "PCF8575 Settings",
+      "onSave": {
+        "type": "controller",
+        "endpoint": "system_hardware/i2c-radio-buttons",
+        "method": "savePCFConfig"
+      },
+      "saveButton": {
+        "label": "Save",
+        "saveOnChange": false,
+        "data": [
+          "pcf8575_enabled",
+          "pcf8575_addr"
+        ]
+      },
+      "content": [
+        {
+          "id": "pcf8575_enabled",
+          "element": "switch",
+          "label": "Enable PCF8575 Expander",
+          "value": false
+        },
+        {
+          "id": "pcf8575_addr",
+          "element": "input",
+          "label": "I2C Address",
+          "value": "0x20",
+          "description": "Default 0x00 (A0-A2 = 000)"
+        }
+      ]
+    },
+    {
+      "id": "buttons_section",
+      "element": "section",
+      "label": "Radio Buttons (1-9)",
+      "onSave": {
+        "type": "controller",
+        "endpoint": "system_hardware/i2c-radio-buttons",
+        "method": "saveRadioButtonsConfig"
+      },
+      "saveButton": {
+        "label": "Save",
+        "saveOnChange": false,
+        "data": [
+          "button1_station",
+          "button2_station",
+          "button3_station",
+          "button4_station",
+          "button5_station",
+          "button6_station",
+          "button7_station",
+          "button8_station",
+          "button9_station"
+        ]
+      },
+      "content": [
+        {
+          "id": "button1_station",
+          "element": "select",
+          "label": "Button 1 Station",
+          "value": "",
+          "options": []
+        },
+        {
+          "id": "button2_station",
+          "element": "select",
+          "label": "Button 2 Station",
+          "value": "",
+          "options": []
+        },
+        {
+          "id": "button3_station",
+          "element": "select",
+          "label": "Button 3 Station",
+          "value": "",
+          "options": []
+        },
+        {
+          "id": "button4_station",
+          "element": "select",
+          "label": "Button 4 Station",
+          "value": "",
+          "options": []
+        },
+        {
+          "id": "button5_station",
+          "element": "select",
+          "label": "Button 5 Station",
+          "value": "",
+          "options": []
+        },
+        {
+          "id": "button6_station",
+          "element": "select",
+          "label": "Button 6 Station",
+          "value": "",
+          "options": []
+        },
+        {
+          "id": "button7_station",
+          "element": "select",
+          "label": "Button 7 Station",
+          "value": "",
+          "options": []
+        },
+        {
+          "id": "button8_station",
+          "element": "select",
+          "label": "Button 8 Station",
+          "value": "",
+          "options": []
+        },
+        {
+          "id": "button9_station",
+          "element": "select",
+          "label": "Button 9 Station",
+          "value": "",
+          "options": []
+        },
+        {
+          "id": "button10_station",
+          "element": "select",
+          "label": "Button 10 Station",
+          "value": "",
+          "options": []
+        }
+      ]
+    }
+  ]
+}
