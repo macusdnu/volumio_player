@@ -216,7 +216,9 @@ RadioButtons.prototype.savePCFConfig = function (data) {
         const enabled = (enabledVal === true || enabledVal === "true");
 
         let addrVal = data.pcf8575_addr;
-        if (typeof addrVal === 'object' && addrVal !== null && addrVal.value !== undefined) {
+        if (addrVal === undefined || addrVal === null) {
+            addrVal = this.config.get("pcf8575_addr") || "0x20";
+        } else if (typeof addrVal === 'object' && addrVal !== null && addrVal.value !== undefined) {
             addrVal = addrVal.value;
         }
         const addr = ("" + addrVal).trim();
@@ -259,9 +261,21 @@ RadioButtons.prototype.savePCFConfig = function (data) {
 };
 
 RadioButtons.prototype.initPCF8575 = function () {
-    const rawAddr = this.config.get("pcf8575_addr");
+    let rawAddr = this.config.get("pcf8575_addr");
+    if (typeof rawAddr === 'object' && rawAddr !== null && rawAddr.value !== undefined) {
+        rawAddr = rawAddr.value;
+    }
+    if (!rawAddr || rawAddr === "undefined" || rawAddr === "null") {
+        rawAddr = "0x20";
+    }
+
     this.logger.info(`[RadioButtons] initPCF8575 raw addr: ${rawAddr} (type: ${typeof rawAddr})`);
-    const addr = parseInt(rawAddr, 16);
+
+    let addr = parseInt(rawAddr, 16);
+    if (isNaN(addr)) {
+        this.logger.error(`[RadioButtons] Invalid PCF8575 address: '${rawAddr}'. Defaulting to 0x20.`);
+        addr = 0x20;
+    }
 
     try {
         this.i2cBus = i2c.openSync(1);
